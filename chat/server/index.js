@@ -7,15 +7,19 @@ const io = socketIo(server,{ cors: { origin: "*", methods: ["GET", "POST"] } });
 
 
 io.on('connection', (socket) => {
-    console.log( socket.id + ' user connected');
+    
 
     socket.on('disconnect', () => {
-        console.log('user disconnected');
+        console.log(socket.nick + ' disconnected');
     });
 
     socket.on('chat message', (msg) => {
         console.log('Message: ' + msg);
         io.emit('chat message', msg);
+    });
+    socket.on('register', (nick) => {
+        socket.nick = nick;
+        console.log(nick + ' connected');
     });
 });
 
