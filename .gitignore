@@ -1,0 +1,34 @@
+# Ignore node_modules
+chat/client/chat-client/node_modules/
+chat/server/node_modules/
+
+# Ignore build directories
+chat/client/chat-client/build/
+chat/server/build/
+
+# Ignore logs
+chat/client/chat-client/logs/
+chat/server/logs/
+*.log
+
+# Ignore environment variable files
+chat/client/chat-client/.env
+chat/server/.env
+
+# Ignore coverage directory
+chat/client/chat-client/coverage/
+chat/server/coverage/
+
+# Ignore temporary files
+chat/client/chat-client/tmp/
+chat/server/tmp/
+*.tmp
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+*.swp
